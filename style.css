@@ -75,8 +75,12 @@ img {
   transition: color 0.3s;
 }
 
-/* Pseudo-class: hover on nav links */
-.nav-links a:hover {
+/* Pseudo-class: active nav link (set by JS on scroll) */
+.nav-links a.active {
+  color: #f0c040;
+  border-bottom: 2px solid #f0c040;
+}
+
   color: #f0c040;
 }
 
