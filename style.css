@@ -99,16 +99,18 @@ img { max-width: 100%; display: block; }
   position: relative;
 }
 
-/* Parallax 1 — Hero: woman in hat, foggy/grey */
+/* Parallax 1 — Hero: person from behind, beige jacket, grey knit hat, foggy white background */
 .parallax-1 {
-  background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1600&q=80');
+  background-image: url('https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=1600&q=80');
+  background-color: #d0cece;
 }
 
-/* Parallax 2 — Portfolio: greyscale, desaturated */
+/* Parallax 2 — Portfolio: greyscale, desaturated woman with hair blowing */
 .parallax-2 {
   background-image: url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1600&q=80');
   min-height: 60vh;
-  filter: grayscale(50%);
+  filter: grayscale(60%);
+  background-position: center top;
 }
 
 /* Parallax 3 — Contact: woman holding camera */
@@ -117,20 +119,21 @@ img { max-width: 100%; display: block; }
   min-height: 60vh;
 }
 
-/* Hero dark box — "MY WEBSITE LOGO" style */
+/* Hero dark box — exactly matching W3Schools "MY WEBSITE LOGO" box */
 .logo-box {
-  background-color: rgba(25, 25, 25, 0.78);
-  padding: 20px 52px;
+  background-color: rgba(20, 20, 20, 0.82);
+  padding: 22px 56px;
   position: relative;
   z-index: 1;
   animation: fadeIn 1.2s ease;
 }
 .logo-box span {
   color: #fff;
-  font-size: 1.7rem;
-  font-weight: 400;
-  letter-spacing: 12px;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 14px;
   text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Parallax section label — "P O R T F O L I O" */
