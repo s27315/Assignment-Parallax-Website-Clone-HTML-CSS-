@@ -354,7 +354,7 @@ img {
   border-radius: 4px;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.95rem;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 /* Pseudo-class: focus on form inputs */
@@ -362,6 +362,7 @@ img {
 .contact-form textarea:focus {
   outline: none;
   border-color: #f0c040;
+  box-shadow: 0 0 0 3px rgba(240,192,64,0.2);
 }
 
 .map-container {
