@@ -36,6 +36,7 @@
     <div class="container">
       <h2>ABOUT ME</h2>
       <p class="subtitle"><em>I love travel &amp; photography</em></p>
+
       <p class="about-text">
         We have created a fictional "personal" travel website, and our fictional character is a hobby photographer
         and passionate explorer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -50,17 +51,20 @@
       <div class="about-grid">
         <div class="about-left">
           <p class="about-name"><i class="fas fa-user"></i> &nbsp; My Name</p>
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="Profile photo" />
+          <img
+            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&q=80"
+            alt="Profile photo"
+            onerror="this.src='https://picsum.photos/600/500?grayscale'" />
         </div>
         <div class="about-right">
           <p>
-            Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Welcome to my website. I am a passionate travel photographer exploring the world one destination
+            at a time. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
       </div>
@@ -71,21 +75,21 @@
       <div class="skill">
         <p><i class="fas fa-camera"></i> &nbsp; P h o t o g r a p h y</p>
         <div class="skill-bar-wrap">
-          <div class="skill-bar" style="width:90%">90%</div>
+          <div class="skill-bar" data-width="90">90%</div>
         </div>
       </div>
 
       <div class="skill">
         <p><i class="fas fa-desktop"></i> &nbsp; W e b &nbsp; D e s i g n</p>
         <div class="skill-bar-wrap">
-          <div class="skill-bar" style="width:85%">85%</div>
+          <div class="skill-bar" data-width="85">85%</div>
         </div>
       </div>
 
       <div class="skill">
         <p><i class="fas fa-image"></i> &nbsp; P h o t o s h o p</p>
         <div class="skill-bar-wrap">
-          <div class="skill-bar" style="width:75%">75%</div>
+          <div class="skill-bar" data-width="75">75%</div>
         </div>
       </div>
     </div>
@@ -120,41 +124,56 @@
   <section id="portfolio" class="content-section">
     <div class="container">
       <h2>MY WORK</h2>
-      <p class="subtitle"><em>Here are some of my latest travel photos ipsum tipsum.</em></p>
+      <p class="subtitle"><em>Here are some of my latest travel photos.</em></p>
       <p class="subtitle"><em>Click on the images to make them bigger</em></p>
 
       <div class="gallery-grid">
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=80" alt="Mountains" />
+        <div class="gallery-card" onclick="openModal(this)">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Mountains" onerror="this.src='https://picsum.photos/600/400?random=1'" />
+          <div class="gallery-zoom"><i class="fas fa-search-plus"></i></div>
         </div>
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80" alt="Beach" />
+        <div class="gallery-card" onclick="openModal(this)">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Beach" onerror="this.src='https://picsum.photos/600/400?random=2'" />
+          <div class="gallery-zoom"><i class="fas fa-search-plus"></i></div>
         </div>
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?w=400&q=80" alt="Bear" />
+        <div class="gallery-card" onclick="openModal(this)">
+          <img src="https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?w=600&q=80" alt="Wildlife" onerror="this.src='https://picsum.photos/600/400?random=3'" />
+          <div class="gallery-zoom"><i class="fas fa-search-plus"></i></div>
         </div>
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&q=80" alt="Ocean" />
+        <div class="gallery-card" onclick="openModal(this)">
+          <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=600&q=80" alt="Ocean" onerror="this.src='https://picsum.photos/600/400?random=4'" />
+          <div class="gallery-zoom"><i class="fas fa-search-plus"></i></div>
         </div>
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=400&q=80" alt="Forest" />
+        <div class="gallery-card" onclick="openModal(this)">
+          <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=600&q=80" alt="Forest" onerror="this.src='https://picsum.photos/600/400?random=5'" />
+          <div class="gallery-zoom"><i class="fas fa-search-plus"></i></div>
         </div>
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400&q=80" alt="Desert" />
+        <div class="gallery-card" onclick="openModal(this)">
+          <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" alt="Desert" onerror="this.src='https://picsum.photos/600/400?random=6'" />
+          <div class="gallery-zoom"><i class="fas fa-search-plus"></i></div>
         </div>
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&q=80" alt="Aurora" />
+        <div class="gallery-card" onclick="openModal(this)">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Aurora" onerror="this.src='https://picsum.photos/600/400?random=7'" />
+          <div class="gallery-zoom"><i class="fas fa-search-plus"></i></div>
         </div>
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=400&q=80" alt="Ruins" />
+        <div class="gallery-card" onclick="openModal(this)">
+          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600&q=80" alt="Ruins" onerror="this.src='https://picsum.photos/600/400?random=8'" />
+          <div class="gallery-zoom"><i class="fas fa-search-plus"></i></div>
         </div>
       </div>
 
       <div class="load-more-wrap">
-        <button class="btn-load">LOAD MORE</button>
+        <button class="btn-load" id="loadMoreBtn">LOAD MORE</button>
       </div>
     </div>
   </section>
+
+  <!-- ===== LIGHTBOX MODAL ===== -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img id="modal-img" src="" alt="Full size" onclick="event.stopPropagation()" />
+    <p id="modal-caption"></p>
+  </div>
 
   <!-- ===== SLIDE 5 — PARALLAX CONTACT ===== -->
   <section class="parallax parallax-3">
@@ -168,13 +187,12 @@
       <p class="subtitle"><em>I'd love your feedback!</em></p>
 
       <div class="contact-grid">
-        <!-- Left: map image -->
+        <!-- Left: Google Map -->
         <div class="contact-map">
           <iframe
-            title="Google Map"
+            title="Google Map — Paris"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.76457430433!2d2.2769952!3d48.8589507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sus!4v1700000000000"
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
 
@@ -186,18 +204,21 @@
 
           <p class="form-note">Swing by for a cup of ☕, or leave me a note:</p>
 
-          <form class="contact-form" onsubmit="return false;">
+          <form class="contact-form" id="contactForm" onsubmit="sendMessage(event)">
             <div class="form-row">
-              <input type="text" placeholder="Name" required />
-              <input type="email" placeholder="Email" required />
+              <input type="text" id="fname" placeholder="Name" required />
+              <input type="email" id="femail" placeholder="Email" required />
             </div>
-            <textarea rows="4" placeholder="Message"></textarea>
+            <textarea id="fmessage" rows="4" placeholder="Message"></textarea>
             <div class="form-btn-wrap">
               <button type="submit" class="btn-send">
                 <i class="fas fa-paper-plane"></i> SEND MESSAGE
               </button>
             </div>
           </form>
+          <p id="form-success" class="form-success" style="display:none;">
+            <i class="fas fa-check-circle"></i> Message sent! Thank you.
+          </p>
         </div>
       </div>
     </div>
@@ -220,19 +241,17 @@
   </footer>
 
   <script>
-    // Mobile nav toggle
+    /* ---- Mobile nav toggle ---- */
     document.getElementById('navToggle').addEventListener('click', function () {
       document.getElementById('navLinks').classList.toggle('open');
     });
-
-    // Close nav on link click
     document.querySelectorAll('.nav-links a').forEach(function (link) {
       link.addEventListener('click', function () {
         document.getElementById('navLinks').classList.remove('open');
       });
     });
 
-    // Active nav on scroll
+    /* ---- Active nav on scroll ---- */
     var sections = document.querySelectorAll('section[id]');
     var navLinks = document.querySelectorAll('.nav-links a');
     window.addEventListener('scroll', function () {
@@ -244,6 +263,57 @@
           if (active) active.classList.add('active');
         }
       });
+    });
+
+    /* ---- Animated skill bars on scroll ---- */
+    var skillsAnimated = false;
+    function animateSkills() {
+      if (skillsAnimated) return;
+      var aboutSection = document.getElementById('about');
+      if (window.scrollY + window.innerHeight > aboutSection.offsetTop + 300) {
+        document.querySelectorAll('.skill-bar').forEach(function (bar) {
+          var w = bar.getAttribute('data-width');
+          bar.style.width = w + '%';
+        });
+        skillsAnimated = true;
+      }
+    }
+    window.addEventListener('scroll', animateSkills);
+
+    /* ---- Lightbox modal ---- */
+    function openModal(card) {
+      var img = card.querySelector('img');
+      document.getElementById('modal-img').src = img.src;
+      document.getElementById('modal-caption').textContent = img.alt;
+      document.getElementById('modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      document.getElementById('modal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    /* ---- Load More button ---- */
+    document.getElementById('loadMoreBtn').addEventListener('click', function () {
+      this.textContent = 'NO MORE ITEMS';
+      this.disabled = true;
+      this.style.opacity = '0.5';
+    });
+
+    /* ---- Contact form submit ---- */
+    function sendMessage(e) {
+      e.preventDefault();
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+
+    /* ---- Navbar shadow on scroll ---- */
+    window.addEventListener('scroll', function () {
+      var nav = document.getElementById('navbar');
+      nav.style.boxShadow = window.scrollY > 10 ? '0 2px 10px rgba(0,0,0,0.4)' : 'none';
     });
   </script>
 

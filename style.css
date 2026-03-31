@@ -5,14 +5,8 @@
    ============================================= */
 
 /* ---------- RESET & BASE ---------- */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
@@ -21,22 +15,15 @@ body {
   line-height: 1.8;
   background: #fff;
 }
-
 img { max-width: 100%; display: block; }
 
 /* ---------- CONTAINER ---------- */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
 /* ---------- NAVBAR ---------- */
-/* Fixed dark navbar matching W3Schools template */
 #navbar {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   z-index: 1000;
   background-color: #3a3a3a;
@@ -44,13 +31,10 @@ img { max-width: 100%; display: block; }
   align-items: center;
   height: 46px;
   padding: 0 16px;
+  transition: box-shadow 0.3s;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  flex: 1;
-}
+.nav-links { list-style: none; display: flex; flex: 1; }
 
 .nav-links a {
   display: block;
@@ -66,22 +50,19 @@ img { max-width: 100%; display: block; }
 
 /* Pseudo-class: hover on nav links */
 .nav-links a:hover,
-.nav-links a.active {
-  background-color: #555;
-}
+.nav-links a.active { background-color: #555; }
 
-.nav-links a i {
-  margin-right: 4px;
-  font-size: 0.75rem;
-}
+.nav-links a i { margin-right: 5px; font-size: 0.75rem; }
 
 .nav-search {
   color: #fff;
   font-size: 0.9rem;
   margin-left: auto;
   cursor: pointer;
-  padding: 0 8px;
+  padding: 0 10px;
+  transition: color 0.2s;
 }
+.nav-search:hover { color: #ccc; }
 
 .nav-toggle {
   display: none;
@@ -93,24 +74,17 @@ img { max-width: 100%; display: block; }
   margin-right: 12px;
 }
 
-/* ---------- PARALLAX SECTIONS ---------- */
+/* ---------- PARALLAX ---------- */
 /*
   HOW THE PARALLAX EFFECT WORKS:
   ─────────────────────────────────────────────────────────────
   background-attachment: fixed
-    → The background image is fixed relative to the VIEWPORT.
-      As the user scrolls, the page content moves but the
-      background image stays still — creating the parallax
-      depth illusion.
-
-  background-size: cover
-    → Fills the entire section regardless of screen size.
-
-  background-position: center
-    → Keeps the focal point of the image centered.
-
-  On mobile (≤600px) we switch to background-attachment: scroll
-  because iOS Safari has a known bug with fixed backgrounds.
+    → The background image is fixed to the VIEWPORT.
+      As the user scrolls, the content moves but the image
+      stays still — creating the parallax depth illusion.
+  background-size: cover  → fills the section fully.
+  background-position: center → keeps focal point centered.
+  On mobile (≤600px) we use scroll to fix iOS Safari bug.
   ─────────────────────────────────────────────────────────────
 */
 .parallax {
@@ -125,148 +99,149 @@ img { max-width: 100%; display: block; }
   position: relative;
 }
 
-/* Parallax 1 — Hero: person in hat, foggy */
+/* Parallax 1 — Hero: woman in hat, foggy/grey */
 .parallax-1 {
   background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1600&q=80');
 }
 
-/* Parallax 2 — Portfolio: greyscale woman */
+/* Parallax 2 — Portfolio: greyscale, desaturated */
 .parallax-2 {
   background-image: url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1600&q=80');
   min-height: 60vh;
-  filter: grayscale(40%);
+  filter: grayscale(50%);
 }
 
-/* Parallax 3 — Contact: woman with camera */
+/* Parallax 3 — Contact: woman holding camera */
 .parallax-3 {
   background-image: url('https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?w=1600&q=80');
   min-height: 60vh;
 }
 
-/* Hero logo box — dark semi-transparent rectangle */
+/* Hero dark box — "MY WEBSITE LOGO" style */
 .logo-box {
-  background-color: rgba(30, 30, 30, 0.75);
-  padding: 18px 48px;
+  background-color: rgba(25, 25, 25, 0.78);
+  padding: 20px 52px;
   position: relative;
   z-index: 1;
+  animation: fadeIn 1.2s ease;
 }
-
 .logo-box span {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 400;
-  letter-spacing: 10px;
+  letter-spacing: 12px;
   text-transform: uppercase;
 }
 
-/* Portfolio / Contact label on parallax */
+/* Parallax section label — "P O R T F O L I O" */
 .parallax-label {
   position: relative;
   z-index: 1;
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 300;
-  letter-spacing: 14px;
+  letter-spacing: 16px;
   text-transform: uppercase;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ---------- CONTENT SECTIONS ---------- */
-.content-section {
-  padding: 80px 20px;
-  background-color: #fff;
-}
+.content-section { padding: 80px 20px; background-color: #fff; }
 
 .content-section h2 {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 400;
   color: #555;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   margin-bottom: 10px;
 }
 
 .subtitle {
   text-align: center;
-  color: #777;
+  color: #888;
   font-size: 0.95rem;
   margin-bottom: 6px;
 }
 
-/* ---------- ABOUT SECTION ---------- */
+/* ---------- ABOUT ---------- */
 .about-text {
-  max-width: 900px;
-  margin: 24px auto 40px;
+  max-width: 960px;
+  margin: 28px auto 44px;
   color: #555;
   font-size: 0.95rem;
-  line-height: 1.9;
+  line-height: 2;
 }
 
-/* Two-column about layout */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 48px;
   margin-top: 30px;
   text-align: left;
 }
 
-.about-name {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 12px;
-}
+.about-name { font-size: 1rem; color: #555; margin-bottom: 14px; }
 
-.about-right p {
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.9;
+.about-left img {
+  width: 100%;
+  transition: transform 0.4s ease;
 }
+.about-left img:hover { transform: scale(1.02); }
+
+.about-right p { color: #555; font-size: 0.95rem; line-height: 2; }
 
 /* ---------- SKILL BARS ---------- */
 .skills-title {
   text-align: center;
-  color: #777;
-  margin: 50px 0 24px;
+  color: #888;
+  margin: 54px 0 28px;
   font-size: 0.95rem;
 }
 
-.skill {
-  max-width: 900px;
-  margin: 0 auto 20px;
-}
+.skill { max-width: 960px; margin: 0 auto 22px; }
 
 .skill p {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #555;
-  letter-spacing: 3px;
-  margin-bottom: 6px;
+  letter-spacing: 4px;
+  margin-bottom: 7px;
 }
 
 .skill-bar-wrap {
   background-color: #e0e0e0;
   width: 100%;
   height: 36px;
+  overflow: hidden;
 }
 
+/* CSS class: skill-bar — animated width on scroll */
 .skill-bar {
   background-color: #555;
   height: 36px;
+  width: 0;                        /* starts at 0, JS animates to data-width */
   color: #fff;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: width 1.2s ease;
 }
 
 /* ---------- STATS BAR ---------- */
-/* Dark grey bar with 4 counters */
 .stats-bar {
   background-color: #555;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
-  padding: 24px 0;
+  padding: 28px 0;
 }
 
 .stat {
@@ -275,37 +250,40 @@ img { max-width: 100%; display: block; }
   align-items: center;
   border-right: 1px solid #666;
   padding: 10px 0;
+  transition: background-color 0.3s;
 }
-
 .stat:last-child { border-right: none; }
 
+/* Pseudo-class: hover on stat */
+.stat:hover { background-color: #4a4a4a; }
+
 .stat-num {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #fff;
   letter-spacing: 1px;
 }
-
 .stat-label {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: #ccc;
-  margin-top: 4px;
+  margin-top: 5px;
   letter-spacing: 1px;
 }
 
 /* ---------- GALLERY GRID ---------- */
-/* 4-column grid, no gaps, matching W3Schools template */
+/* 4×2 grid matching W3Schools template */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4px;
-  margin-top: 30px;
+  margin-top: 32px;
 }
 
 /* CSS class: gallery-card */
 .gallery-card {
   overflow: hidden;
   cursor: pointer;
+  position: relative;
 }
 
 .gallery-card img {
@@ -313,58 +291,102 @@ img { max-width: 100%; display: block; }
   height: 200px;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease, opacity 0.3s;
+  transition: transform 0.4s ease, filter 0.3s;
 }
 
 /* Pseudo-class: hover on gallery card */
 .gallery-card:hover img {
-  transform: scale(1.05);
-  opacity: 0.85;
+  transform: scale(1.06);
+  filter: brightness(0.75);
 }
+
+/* Zoom icon overlay on hover */
+.gallery-zoom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: #fff;
+  font-size: 1.6rem;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+.gallery-card:hover .gallery-zoom { transform: translate(-50%, -50%) scale(1); }
 
 /* LOAD MORE button */
-.load-more-wrap {
-  text-align: center;
-  margin-top: 30px;
-}
+.load-more-wrap { text-align: center; margin-top: 32px; }
 
 .btn-load {
-  padding: 12px 32px;
+  padding: 12px 36px;
   background-color: #fff;
   color: #555;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-/* Pseudo-class: hover on load more button */
-.btn-load:hover {
-  background-color: #555;
+/* Pseudo-class: hover on load more */
+.btn-load:hover { background-color: #555; color: #fff; border-color: #555; }
+
+/* ---------- LIGHTBOX MODAL ---------- */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease;
+}
+.modal.active { display: flex; }
+
+.modal img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
   color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.modal-close:hover { color: #ccc; }
+
+#modal-caption {
+  color: #ccc;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 /* ---------- CONTACT SECTION ---------- */
-/* Two-column: map left, info+form right */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-top: 40px;
+  gap: 44px;
+  margin-top: 44px;
   text-align: left;
 }
 
-.contact-map {
-  min-height: 350px;
-}
-
+.contact-map { min-height: 380px; }
 .contact-map iframe {
   width: 100%;
   height: 100%;
-  min-height: 350px;
+  min-height: 380px;
   display: block;
   border: 0;
 }
@@ -372,34 +394,21 @@ img { max-width: 100%; display: block; }
 .contact-right p {
   color: #555;
   font-size: 0.95rem;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
-
-.contact-right p i {
-  color: #777;
-  width: 18px;
-}
+.contact-right p i { color: #777; width: 18px; }
 
 .form-note {
-  margin-top: 20px;
-  margin-bottom: 16px !important;
+  margin-top: 22px;
+  margin-bottom: 18px !important;
   font-size: 0.9rem;
-  color: #777;
+  color: #888;
 }
 
 /* CSS class: contact-form */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+.contact-form { display: flex; flex-direction: column; gap: 12px; }
 
-/* Two inputs side by side */
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
 .contact-form input,
 .contact-form textarea {
@@ -411,186 +420,119 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
   font-weight: 300;
   outline: none;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 /* Pseudo-class: focus on form inputs */
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #555;
+  box-shadow: 0 0 0 2px rgba(85,85,85,0.15);
 }
 
-.form-btn-wrap {
-  text-align: right;
-}
+.form-btn-wrap { text-align: right; }
 
-/* SEND MESSAGE button — black, right-aligned */
+/* SEND MESSAGE — black button, right-aligned */
 .btn-send {
   padding: 12px 28px;
   background-color: #222;
   color: #fff;
   border: none;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 400;
   letter-spacing: 2px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 /* Pseudo-class: hover on send button */
-.btn-send:hover {
-  background-color: #444;
+.btn-send:hover { background-color: #444; transform: translateY(-1px); }
+
+.form-success {
+  color: #4caf50;
+  font-size: 0.95rem;
+  margin-top: 16px;
+  letter-spacing: 1px;
 }
 
 /* ---------- FOOTER ---------- */
 #footer {
   background-color: #666;
   text-align: center;
-  padding: 40px 20px;
+  padding: 44px 20px;
 }
 
-/* "To the top" button */
 .btn-top {
   display: inline-block;
-  padding: 10px 24px;
+  padding: 10px 26px;
   background-color: #fff;
   color: #555;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 400;
   letter-spacing: 1px;
-  margin-bottom: 24px;
-  transition: background-color 0.3s;
+  margin-bottom: 26px;
+  transition: background-color 0.3s, transform 0.2s;
 }
+.btn-top:hover { background-color: #eee; transform: translateY(-2px); }
 
-.btn-top:hover {
-  background-color: #eee;
-}
-
-/* Social icons row */
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 4px;
-  margin-bottom: 20px;
+  gap: 2px;
+  margin-bottom: 22px;
 }
 
 .social-links a {
   color: #fff;
-  font-size: 1.3rem;
-  padding: 6px 10px;
-  transition: color 0.3s;
+  font-size: 1.4rem;
+  padding: 6px 12px;
+  transition: color 0.3s, transform 0.2s;
   text-decoration: none;
 }
 
 /* Pseudo-class: hover on social links */
-.social-links a:hover {
-  color: #ccc;
-}
+.social-links a:hover { color: #ddd; transform: translateY(-3px); }
 
-#footer p {
-  color: #ccc;
-  font-size: 0.85rem;
-}
-
-#footer p a {
-  color: #fff;
-  text-decoration: underline;
-}
+#footer p { color: #ccc; font-size: 0.82rem; }
+#footer p a { color: #fff; text-decoration: underline; }
 
 /* ---------- RESPONSIVE — TABLET (≤900px) ---------- */
 @media (max-width: 900px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stats-bar {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .stat {
-    border-right: none;
-    border-bottom: 1px solid #666;
-  }
-
-  .logo-box span {
-    font-size: 1.2rem;
-    letter-spacing: 6px;
-  }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid   { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .stats-bar    { grid-template-columns: repeat(2, 1fr); }
+  .stat         { border-right: none; border-bottom: 1px solid #666; }
+  .logo-box span { font-size: 1.2rem; letter-spacing: 7px; }
+  .parallax-label { font-size: 1.6rem; letter-spacing: 10px; }
 }
 
 /* ---------- RESPONSIVE — MOBILE (≤600px) ---------- */
 @media (max-width: 600px) {
-  /* Show hamburger, hide nav links */
-  .nav-toggle {
-    display: block;
-  }
+  .nav-toggle { display: block; }
 
   .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 46px;
-    left: 0;
+    top: 46px; left: 0;
     width: 100%;
     background-color: #3a3a3a;
   }
+  .nav-links.open { display: flex; }
+  .nav-links a { line-height: 44px; border-bottom: 1px solid #555; text-align: center; }
 
-  .nav-links.open {
-    display: flex;
-  }
+  /* iOS Safari fix */
+  .parallax { background-attachment: scroll; }
 
-  .nav-links a {
-    line-height: 44px;
-    border-bottom: 1px solid #555;
-    text-align: center;
-  }
+  .logo-box span  { font-size: 1rem; letter-spacing: 4px; }
+  .parallax-label { font-size: 1.1rem; letter-spacing: 6px; }
 
-  /* Mobile: disable fixed background (iOS bug) */
-  .parallax {
-    background-attachment: scroll;
-  }
-
-  .parallax-label {
-    font-size: 1.3rem;
-    letter-spacing: 8px;
-  }
-
-  .logo-box span {
-    font-size: 1rem;
-    letter-spacing: 4px;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .stats-bar {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .content-section {
-    padding: 50px 16px;
-  }
-
-  .skill-bar-wrap {
-    height: 30px;
-  }
-
-  .skill-bar {
-    height: 30px;
-  }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .form-row     { grid-template-columns: 1fr; }
+  .stats-bar    { grid-template-columns: repeat(2, 1fr); }
+  .content-section { padding: 50px 16px; }
+  .skill-bar-wrap, .skill-bar { height: 30px; }
 }
