@@ -94,9 +94,27 @@ img {
 }
 
 /* ---------- PARALLAX SECTIONS ---------- */
-/* Core parallax technique:
-   background-attachment: fixed keeps the background image stationary
-   while the content scrolls over it, creating the parallax illusion. */
+/*
+  HOW THE PARALLAX EFFECT WORKS:
+  ─────────────────────────────────────────────────────────────
+  background-attachment: fixed
+    → The background image is fixed relative to the VIEWPORT,
+      not the element. As the user scrolls, the page content
+      moves but the background image stays in place, creating
+      a depth/layering illusion known as the parallax effect.
+
+  background-size: cover
+    → Ensures the image always fills the full section area
+      regardless of screen size.
+
+  background-position: center
+    → Keeps the most visually important part of the image
+      centered at all times.
+
+  On mobile (≤600px), background-attachment is set to scroll
+  because fixed attachment causes rendering bugs on iOS Safari.
+  ─────────────────────────────────────────────────────────────
+*/
 .parallax {
   background-attachment: fixed;
   background-size: cover;
