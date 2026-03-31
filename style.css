@@ -1,6 +1,7 @@
 /* =============================================
    PARALLAX WEBSITE CLONE — style.css
-   Theme: Explore Earth | Clone of W3Schools Parallax Template
+   Theme: Explore Earth
+   Clone of: W3Schools Parallax Template
    ============================================= */
 
 /* ---------- RESET & BASE ---------- */
@@ -14,89 +15,72 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   font-size: 15px;
   color: #555;
   line-height: 1.8;
+  background: #fff;
 }
 
 img { max-width: 100%; display: block; }
 
-/* ---------- UTILITY ---------- */
+/* ---------- CONTAINER ---------- */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* Horizontal rule divider (W3Schools style) */
-.divider {
-  width: 60px;
-  height: 4px;
-  background-color: #f4511e;
-  margin: 16px auto 28px;
-}
-
-.divider-light { background-color: #f4511e; }
-
-.lead {
-  font-size: 1.05rem;
-  max-width: 700px;
-  margin: 0 auto 20px;
-  text-align: center;
-}
-
-/* ---------- FIXED NAVBAR ---------- */
+/* ---------- NAVBAR ---------- */
+/* Fixed dark navbar matching W3Schools template */
 #navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #3a3a3a;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-  height: 60px;
-}
-
-.nav-brand {
-  font-family: 'Lora', serif;
-  font-size: 1.3rem;
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: 1px;
+  height: 46px;
+  padding: 0 16px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 0;
+  flex: 1;
 }
 
 .nav-links a {
   display: block;
   padding: 0 16px;
-  line-height: 60px;
-  color: #ddd;
+  line-height: 46px;
+  color: #fff;
   text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: color 0.3s, background-color 0.3s;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: background-color 0.2s;
 }
 
 /* Pseudo-class: hover on nav links */
-.nav-links a:hover {
-  color: #fff;
-  background-color: #f4511e;
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #555;
 }
 
-/* Active nav link */
-.nav-links a.active {
+.nav-links a i {
+  margin-right: 4px;
+  font-size: 0.75rem;
+}
+
+.nav-search {
   color: #fff;
-  background-color: #f4511e;
+  font-size: 0.9rem;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 0 8px;
 }
 
 .nav-toggle {
@@ -104,8 +88,9 @@ img { max-width: 100%; display: block; }
   background: none;
   border: none;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   cursor: pointer;
+  margin-right: 12px;
 }
 
 /* ---------- PARALLAX SECTIONS ---------- */
@@ -113,21 +98,19 @@ img { max-width: 100%; display: block; }
   HOW THE PARALLAX EFFECT WORKS:
   ─────────────────────────────────────────────────────────────
   background-attachment: fixed
-    → The background image is fixed relative to the VIEWPORT,
-      not the element. As the user scrolls, the page content
-      moves but the background image stays in place, creating
-      a depth/layering illusion known as the parallax effect.
+    → The background image is fixed relative to the VIEWPORT.
+      As the user scrolls, the page content moves but the
+      background image stays still — creating the parallax
+      depth illusion.
 
   background-size: cover
-    → Ensures the image always fills the full section area
-      regardless of screen size.
+    → Fills the entire section regardless of screen size.
 
   background-position: center
-    → Keeps the most visually important part of the image
-      centered at all times.
+    → Keeps the focal point of the image centered.
 
-  On mobile (≤600px), background-attachment is set to scroll
-  because fixed attachment causes rendering bugs on iOS Safari.
+  On mobile (≤600px) we switch to background-attachment: scroll
+  because iOS Safari has a known bug with fixed backgrounds.
   ─────────────────────────────────────────────────────────────
 */
 .parallax {
@@ -139,305 +122,234 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   position: relative;
 }
 
-/* Dark overlay */
-.parallax::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Parallax 1 — Hero */
+/* Parallax 1 — Hero: person in hat, foggy */
 .parallax-1 {
-  background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600&q=80');
+  background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1600&q=80');
 }
 
-/* Parallax 2 — Quote (shorter) */
+/* Parallax 2 — Portfolio: greyscale woman */
 .parallax-2 {
-  background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80');
+  background-image: url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1600&q=80');
   min-height: 60vh;
+  filter: grayscale(40%);
 }
 
-/* Parallax 3 — CTA */
+/* Parallax 3 — Contact: woman with camera */
 .parallax-3 {
-  background-image: url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1600&q=80');
-  min-height: 70vh;
-}
-
-/* Parallax 4 — Join Us */
-.parallax-4 {
-  background-image: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&q=80');
+  background-image: url('https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?w=1600&q=80');
   min-height: 60vh;
 }
 
-.parallax-content {
+/* Hero logo box — dark semi-transparent rectangle */
+.logo-box {
+  background-color: rgba(30, 30, 30, 0.75);
+  padding: 18px 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo-box span {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+/* Portfolio / Contact label on parallax */
+.parallax-label {
   position: relative;
   z-index: 1;
   color: #fff;
-  padding: 20px;
-  max-width: 800px;
-}
-
-.parallax-content h1 {
-  font-family: 'Lora', serif;
-  font-size: 3.5rem;
-  margin-bottom: 16px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.parallax-content h2 {
-  font-family: 'Lora', serif;
   font-size: 2rem;
-  font-style: italic;
-  margin-bottom: 12px;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
-}
-
-.parallax-content p {
-  font-size: 1.1rem;
-  margin-bottom: 28px;
-  opacity: 0.9;
-}
-
-/* ---------- BUTTON ---------- */
-.btn-primary {
-  display: inline-block;
-  padding: 12px 32px;
-  background-color: #f4511e;
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 14px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-/* Pseudo-class: hover on button */
-.btn-primary:hover {
-  background-color: #c0392b;
-  transform: translateY(-2px);
 }
 
 /* ---------- CONTENT SECTIONS ---------- */
 .content-section {
   padding: 80px 20px;
-  text-align: center;
   background-color: #fff;
 }
 
-.bg-grey { background-color: #f6f6f6; }
-
-.bg-dark {
-  background-color: #1a1a1a;
-  color: #ccc;
-}
-
-.bg-dark h2 { color: #fff; }
-.bg-dark p  { color: #ccc; }
-
 .content-section h2 {
-  font-family: 'Lora', serif;
-  font-size: 2.2rem;
-  color: #333;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #555;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
 }
 
-.content-section h3 {
-  font-size: 1.1rem;
+.subtitle {
+  text-align: center;
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+/* ---------- ABOUT SECTION ---------- */
+.about-text {
+  max-width: 900px;
+  margin: 24px auto 40px;
   color: #555;
-  margin: 32px 0 16px;
-  text-transform: uppercase;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+/* Two-column about layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.about-name {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.about-right p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+/* ---------- SKILL BARS ---------- */
+.skills-title {
+  text-align: center;
+  color: #777;
+  margin: 50px 0 24px;
+  font-size: 0.95rem;
+}
+
+.skill {
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+.skill p {
+  font-size: 0.85rem;
+  color: #555;
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+}
+
+.skill-bar-wrap {
+  background-color: #e0e0e0;
+  width: 100%;
+  height: 36px;
+}
+
+.skill-bar {
+  background-color: #555;
+  height: 36px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- STATS BAR ---------- */
+/* Dark grey bar with 4 counters */
+.stats-bar {
+  background-color: #555;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  padding: 24px 0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #666;
+  padding: 10px 0;
+}
+
+.stat:last-child { border-right: none; }
+
+.stat-num {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
   letter-spacing: 1px;
 }
 
-/* ---------- DESTINATION LIST ---------- */
-.destination-list {
-  list-style: none;
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 10px 28px;
-  justify-content: center;
-  margin-top: 12px;
-}
-
-.destination-list li {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.destination-list li i {
-  color: #f4511e;
-  margin-right: 6px;
+.stat-label {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-top: 4px;
+  letter-spacing: 1px;
 }
 
 /* ---------- GALLERY GRID ---------- */
+/* 4-column grid, no gaps, matching W3Schools template */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  margin-top: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-top: 30px;
 }
 
 /* CSS class: gallery-card */
 .gallery-card {
-  position: relative;
   overflow: hidden;
   cursor: pointer;
 }
 
 .gallery-card img {
   width: 100%;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.3s;
 }
 
 /* Pseudo-class: hover on gallery card */
 .gallery-card:hover img {
-  transform: scale(1.08);
+  transform: scale(1.05);
+  opacity: 0.85;
 }
 
-.gallery-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(244, 81, 30, 0.85);
-  color: #fff;
-  padding: 14px;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
+/* LOAD MORE button */
+.load-more-wrap {
   text-align: center;
-}
-
-.gallery-card:hover .gallery-overlay {
-  transform: translateY(0);
-}
-
-.gallery-overlay h4 {
-  font-size: 1rem;
-  margin-bottom: 2px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.gallery-overlay p {
-  font-size: 0.85rem;
-  opacity: 0.9;
-  margin: 0;
-}
-
-/* ---------- FACTS TABLE ---------- */
-.facts-table {
-  width: 100%;
-  border-collapse: collapse;
   margin-top: 30px;
-  font-size: 0.95rem;
-  text-align: left;
 }
 
-.facts-table th {
-  background-color: #f4511e;
-  color: #fff;
-  padding: 14px 18px;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-}
-
-.facts-table td {
-  padding: 12px 18px;
-  border-bottom: 1px solid #ddd;
+.btn-load {
+  padding: 12px 32px;
+  background-color: #fff;
   color: #555;
-}
-
-/* Pseudo-class: nth-child on table rows */
-.facts-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Pseudo-class: hover on table rows */
-.facts-table tbody tr:hover {
-  background-color: #fde8e2;
-}
-
-/* ---------- TEAM GRID ---------- */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.team-card {
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: box-shadow 0.3s;
-}
-
-/* Pseudo-class: hover on team card */
-.team-card:hover {
-  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
-}
-
-.team-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.team-info {
-  padding: 20px;
-  text-align: center;
-}
-
-.team-info h4 {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.team-info p {
+  border: 1px solid #ccc;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.85rem;
-  color: #f4511e;
-  margin-bottom: 12px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.team-social a {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  background-color: #f4511e;
+/* Pseudo-class: hover on load more button */
+.btn-load:hover {
+  background-color: #555;
   color: #fff;
-  border-radius: 50%;
-  font-size: 0.8rem;
-  margin: 0 3px;
-  transition: background-color 0.3s;
-}
-
-/* Pseudo-class: hover on social icons */
-.team-social a:hover {
-  background-color: #c0392b;
 }
 
 /* ---------- CONTACT SECTION ---------- */
-.contact-wrapper {
+/* Two-column: map left, info+form right */
+.contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -445,101 +357,146 @@ img { max-width: 100%; display: block; }
   text-align: left;
 }
 
+.contact-map {
+  min-height: 350px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  display: block;
+  border: 0;
+}
+
+.contact-right p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.contact-right p i {
+  color: #777;
+  width: 18px;
+}
+
+.form-note {
+  margin-top: 20px;
+  margin-bottom: 16px !important;
+  font-size: 0.9rem;
+  color: #777;
+}
+
 /* CSS class: contact-form */
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
-.contact-form label {
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: #ccc;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+/* Two inputs side by side */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 12px 14px;
-  border: 1px solid #444;
-  background-color: #2a2a2a;
-  color: #fff;
-  border-radius: 2px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #555;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  outline: none;
   transition: border-color 0.3s;
 }
 
 /* Pseudo-class: focus on form inputs */
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: none;
-  border-color: #f4511e;
+  border-color: #555;
 }
 
-.map-container {
-  min-height: 350px;
-  overflow: hidden;
+.form-btn-wrap {
+  text-align: right;
 }
 
-.map-container iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 350px;
+/* SEND MESSAGE button — black, right-aligned */
+.btn-send {
+  padding: 12px 28px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* CSS class: contact-info */
-.contact-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 40px;
-  color: #aaa;
-  font-size: 0.95rem;
-}
-
-.contact-info p i {
-  color: #f4511e;
-  margin-right: 8px;
+/* Pseudo-class: hover on send button */
+.btn-send:hover {
+  background-color: #444;
 }
 
 /* ---------- FOOTER ---------- */
 #footer {
-  background-color: #111;
-  color: #aaa;
+  background-color: #666;
   text-align: center;
-  padding: 24px 20px;
+  padding: 40px 20px;
 }
 
-#footer p {
+/* "To the top" button */
+.btn-top {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: #fff;
+  color: #555;
+  text-decoration: none;
   font-size: 0.85rem;
-  margin-top: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  transition: background-color 0.3s;
 }
 
+.btn-top:hover {
+  background-color: #eee;
+}
+
+/* Social icons row */
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 0;
+  gap: 4px;
+  margin-bottom: 20px;
 }
 
 .social-links a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  color: #aaa;
-  font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 6px 10px;
+  transition: color 0.3s;
+  text-decoration: none;
 }
 
-/* Pseudo-class: hover on footer social links */
+/* Pseudo-class: hover on social links */
 .social-links a:hover {
-  background-color: #f4511e;
+  color: #ccc;
+}
+
+#footer p {
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
+#footer p a {
   color: #fff;
+  text-decoration: underline;
 }
 
 /* ---------- RESPONSIVE — TABLET (≤900px) ---------- */
@@ -548,26 +505,32 @@ img { max-width: 100%; display: block; }
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact-wrapper {
+  .about-grid {
     grid-template-columns: 1fr;
   }
 
-  .parallax-content h1 {
-    font-size: 2.4rem;
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 
-  .content-section h2 {
-    font-size: 1.8rem;
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat {
+    border-right: none;
+    border-bottom: 1px solid #666;
+  }
+
+  .logo-box span {
+    font-size: 1.2rem;
+    letter-spacing: 6px;
   }
 }
 
 /* ---------- RESPONSIVE — MOBILE (≤600px) ---------- */
 @media (max-width: 600px) {
-  /* Mobile hamburger menu */
+  /* Show hamburger, hide nav links */
   .nav-toggle {
     display: block;
   }
@@ -576,11 +539,10 @@ img { max-width: 100%; display: block; }
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 46px;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    gap: 0;
+    background-color: #3a3a3a;
   }
 
   .nav-links.open {
@@ -588,47 +550,47 @@ img { max-width: 100%; display: block; }
   }
 
   .nav-links a {
-    line-height: 50px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    line-height: 44px;
+    border-bottom: 1px solid #555;
     text-align: center;
   }
 
-  /* On mobile, fixed background causes iOS bugs — use scroll fallback */
+  /* Mobile: disable fixed background (iOS bug) */
   .parallax {
     background-attachment: scroll;
   }
 
-  .parallax-content h1 {
-    font-size: 1.8rem;
+  .parallax-label {
+    font-size: 1.3rem;
+    letter-spacing: 8px;
   }
 
-  .parallax-content h2 {
-    font-size: 1.3rem;
+  .logo-box span {
+    font-size: 1rem;
+    letter-spacing: 4px;
   }
 
   .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-row {
     grid-template-columns: 1fr;
   }
 
-  .team-grid {
-    grid-template-columns: 1fr;
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .content-section {
     padding: 50px 16px;
   }
 
-  .facts-table {
-    font-size: 0.8rem;
+  .skill-bar-wrap {
+    height: 30px;
   }
 
-  .facts-table th,
-  .facts-table td {
-    padding: 10px 10px;
-  }
-
-  .contact-info {
-    flex-direction: column;
-    align-items: center;
+  .skill-bar {
+    height: 30px;
   }
 }

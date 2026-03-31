@@ -3,259 +3,173 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parallax Website Clone — Explore Earth</title>
+  <title>Explore Earth — Parallax Website</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Lora:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <nav id="navbar">
-    <a href="#home" class="nav-brand">Explore Earth</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
       <i class="fas fa-bars"></i>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about"><i class="fas fa-user"></i> ABOUT</a></li>
+      <li><a href="#portfolio"><i class="fas fa-th"></i> PORTFOLIO</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> CONTACT</a></li>
     </ul>
+    <span class="nav-search"><i class="fas fa-search"></i></span>
   </nav>
 
   <!-- ===== SLIDE 1 — PARALLAX HERO ===== -->
   <section id="home" class="parallax parallax-1">
-    <div class="parallax-content">
-      <h1>Explore the World</h1>
-      <p>Discover breathtaking destinations across the globe</p>
-      <a href="#about" class="btn-primary">Discover More</a>
+    <div class="logo-box">
+      <span>EXPLORE EARTH</span>
     </div>
   </section>
 
-  <!-- ===== SLIDE 2 — ABOUT (white) ===== -->
+  <!-- ===== SLIDE 2 — ABOUT ME ===== -->
   <section id="about" class="content-section">
     <div class="container">
-      <h2>About Us</h2>
-      <div class="divider"></div>
-      <p class="lead">
-        We are passionate travelers dedicated to sharing the beauty of our planet.
-        From towering mountain peaks to serene ocean shores, every destination tells
-        a unique story waiting to be explored.
-      </p>
-      <p>
-        Our mission is to inspire wanderlust and provide guides that help you
-        experience the world authentically — one adventure at a time.
+      <h2>ABOUT ME</h2>
+      <p class="subtitle"><em>I love travel &amp; photography</em></p>
+      <p class="about-text">
+        We have created a fictional "personal" travel website, and our fictional character is a hobby photographer
+        and passionate explorer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.
       </p>
 
-      <!-- Top Destinations List -->
-      <h3>Top Destinations</h3>
-      <ul class="destination-list">
-        <li><i class="fas fa-map-marker-alt"></i> Santorini, Greece</li>
-        <li><i class="fas fa-map-marker-alt"></i> Kyoto, Japan</li>
-        <li><i class="fas fa-map-marker-alt"></i> Patagonia, Argentina</li>
-        <li><i class="fas fa-map-marker-alt"></i> Amalfi Coast, Italy</li>
-        <li><i class="fas fa-map-marker-alt"></i> Banff, Canada</li>
-      </ul>
+      <!-- Two-column: photo + text -->
+      <div class="about-grid">
+        <div class="about-left">
+          <p class="about-name"><i class="fas fa-user"></i> &nbsp; My Name</p>
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="Profile photo" />
+        </div>
+        <div class="about-right">
+          <p>
+            Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <p class="skills-title">Im really good at:</p>
+
+      <div class="skill">
+        <p><i class="fas fa-camera"></i> &nbsp; P h o t o g r a p h y</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" style="width:90%">90%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <p><i class="fas fa-desktop"></i> &nbsp; W e b &nbsp; D e s i g n</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" style="width:85%">85%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <p><i class="fas fa-image"></i> &nbsp; P h o t o s h o p</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" style="width:75%">75%</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== SLIDE 3 — PARALLAX QUOTE ===== -->
+  <!-- ===== STATS BAR ===== -->
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-num">14+</span>
+      <span class="stat-label">Partners</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">55+</span>
+      <span class="stat-label">Projects Done</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">89+</span>
+      <span class="stat-label">Happy Clients</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">150+</span>
+      <span class="stat-label">Meetings</span>
+    </div>
+  </div>
+
+  <!-- ===== SLIDE 3 — PARALLAX PORTFOLIO ===== -->
   <section class="parallax parallax-2">
-    <div class="parallax-content">
-      <h2>"The world is a book, and those who do not travel read only one page."</h2>
-      <p>— Saint Augustine</p>
-    </div>
+    <div class="parallax-label">P O R T F O L I O</div>
   </section>
 
-  <!-- ===== SLIDE 4 — PORTFOLIO (grey) ===== -->
-  <section id="portfolio" class="content-section bg-grey">
+  <!-- ===== SLIDE 4 — MY WORK ===== -->
+  <section id="portfolio" class="content-section">
     <div class="container">
-      <h2>Our Portfolio</h2>
-      <div class="divider"></div>
-      <p class="lead">A glimpse into the world's most stunning landscapes.</p>
+      <h2>MY WORK</h2>
+      <p class="subtitle"><em>Here are some of my latest travel photos ipsum tipsum.</em></p>
+      <p class="subtitle"><em>Click on the images to make them bigger</em></p>
 
       <div class="gallery-grid">
         <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Swiss Alps" />
-          <div class="gallery-overlay">
-            <h4>Swiss Alps</h4>
-            <p>Europe</p>
-          </div>
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=80" alt="Mountains" />
         </div>
         <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Maldives" />
-          <div class="gallery-overlay">
-            <h4>Maldives</h4>
-            <p>Asia</p>
-          </div>
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80" alt="Beach" />
         </div>
         <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=600&q=80" alt="Amazon Rainforest" />
-          <div class="gallery-overlay">
-            <h4>Amazon Rainforest</h4>
-            <p>South America</p>
-          </div>
+          <img src="https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?w=400&q=80" alt="Bear" />
         </div>
         <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Sahara Desert" />
-          <div class="gallery-overlay">
-            <h4>Sahara Desert</h4>
-            <p>Africa</p>
-          </div>
+          <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&q=80" alt="Ocean" />
         </div>
         <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Northern Lights" />
-          <div class="gallery-overlay">
-            <h4>Northern Lights</h4>
-            <p>Iceland</p>
-          </div>
+          <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=400&q=80" alt="Forest" />
         </div>
         <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600&q=80" alt="Machu Picchu" />
-          <div class="gallery-overlay">
-            <h4>Machu Picchu</h4>
-            <p>Peru</p>
-          </div>
+          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400&q=80" alt="Desert" />
         </div>
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&q=80" alt="Aurora" />
+        </div>
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=400&q=80" alt="Ruins" />
+        </div>
+      </div>
+
+      <div class="load-more-wrap">
+        <button class="btn-load">LOAD MORE</button>
       </div>
     </div>
   </section>
 
-  <!-- ===== SLIDE 5 — PARALLAX CTA ===== -->
+  <!-- ===== SLIDE 5 — PARALLAX CONTACT ===== -->
   <section class="parallax parallax-3">
-    <div class="parallax-content">
-      <h2>Adventure Awaits</h2>
-      <p>Every journey begins with a single step</p>
-      <a href="#contact" class="btn-primary">Plan Your Trip</a>
-    </div>
+    <div class="parallax-label">C O N T A C T</div>
   </section>
 
-  <!-- ===== SLIDE 6 — TEAM / FACTS (white) ===== -->
-  <section id="team" class="content-section">
+  <!-- ===== SLIDE 6 — WHERE I WORK + CONTACT FORM ===== -->
+  <section id="contact" class="content-section">
     <div class="container">
-      <h2>Travel Facts</h2>
-      <div class="divider"></div>
-      <p class="lead">Some interesting statistics about world travel destinations.</p>
+      <h2>WHERE I WORK</h2>
+      <p class="subtitle"><em>I'd love your feedback!</em></p>
 
-      <!-- HTML Table -->
-      <table class="facts-table">
-        <thead>
-          <tr>
-            <th>Destination</th>
-            <th>Continent</th>
-            <th>Best Season</th>
-            <th>Avg. Temp (°C)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Santorini</td>
-            <td>Europe</td>
-            <td>Spring / Summer</td>
-            <td>25°C</td>
-          </tr>
-          <tr>
-            <td>Kyoto</td>
-            <td>Asia</td>
-            <td>Spring / Autumn</td>
-            <td>18°C</td>
-          </tr>
-          <tr>
-            <td>Patagonia</td>
-            <td>South America</td>
-            <td>Summer (Dec–Feb)</td>
-            <td>12°C</td>
-          </tr>
-          <tr>
-            <td>Banff</td>
-            <td>North America</td>
-            <td>Summer / Winter</td>
-            <td>8°C</td>
-          </tr>
-          <tr>
-            <td>Maldives</td>
-            <td>Asia</td>
-            <td>Nov – Apr</td>
-            <td>30°C</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Team Cards (W3Schools style) -->
-      <h3 style="margin-top:60px;">Meet the Team</h3>
-      <div class="team-grid">
-        <div class="team-card">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80" alt="Sara" />
-          <div class="team-info">
-            <h4>Sara</h4>
-            <p>Lead Explorer</p>
-            <div class="team-social">
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="team-card">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="James" />
-          <div class="team-info">
-            <h4>James</h4>
-            <p>Travel Photographer</p>
-            <div class="team-social">
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="team-card">
-          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80" alt="Mia" />
-          <div class="team-info">
-            <h4>Mia</h4>
-            <p>Adventure Guide</p>
-            <div class="team-social">
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SLIDE 7 — PARALLAX BANNER ===== -->
-  <section class="parallax parallax-4">
-    <div class="parallax-content">
-      <h2>Join Us</h2>
-      <p>Be part of our growing community of explorers</p>
-      <a href="#contact" class="btn-primary">Get In Touch</a>
-    </div>
-  </section>
-
-  <!-- ===== SLIDE 8 — CONTACT + FOOTER (dark) ===== -->
-  <section id="contact" class="content-section bg-dark">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <div class="divider divider-light"></div>
-      <p class="lead" style="color:#ccc;">Have a question or want to plan your next adventure? Reach out!</p>
-
-      <div class="contact-wrapper">
-        <!-- Contact Form -->
-        <form class="contact-form" onsubmit="return false;">
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your name" required />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="your@email.com" required />
-
-          <label for="message">Message</label>
-          <textarea id="message" rows="5" placeholder="Your message..."></textarea>
-
-          <button type="submit" class="btn-primary">Send Message</button>
-        </form>
-
-        <!-- Google Map -->
-        <div class="map-container">
+      <div class="contact-grid">
+        <!-- Left: map image -->
+        <div class="contact-map">
           <iframe
             title="Google Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.76457430433!2d2.2769952!3d48.8589507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sus!4v1700000000000"
@@ -263,28 +177,46 @@
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
-      </div>
 
-      <!-- Contact Info -->
-      <div class="contact-info">
-        <p><i class="fas fa-map-marker-alt"></i> 123 Adventure Lane, Travel City</p>
-        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-        <p><i class="fas fa-envelope"></i> hello@exploreearth.com</p>
+        <!-- Right: contact info + form -->
+        <div class="contact-right">
+          <p><i class="fas fa-map-marker-alt"></i> &nbsp; Paris, France</p>
+          <p><i class="fas fa-phone"></i> &nbsp; Phone: +00 151515</p>
+          <p><i class="fas fa-envelope"></i> &nbsp; Email: mail@mail.com</p>
+
+          <p class="form-note">Swing by for a cup of ☕, or leave me a note:</p>
+
+          <form class="contact-form" onsubmit="return false;">
+            <div class="form-row">
+              <input type="text" placeholder="Name" required />
+              <input type="email" placeholder="Email" required />
+            </div>
+            <textarea rows="4" placeholder="Message"></textarea>
+            <div class="form-btn-wrap">
+              <button type="submit" class="btn-send">
+                <i class="fas fa-paper-plane"></i> SEND MESSAGE
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer id="footer">
-    <div class="container">
-      <div class="social-links">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      </div>
-      <p>&copy; 2025 Explore Earth. All rights reserved.</p>
+    <a href="#home" class="btn-top">
+      <i class="fas fa-arrow-up"></i> To the top
+    </a>
+    <div class="social-links">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+      <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     </div>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/" target="_blank">w3.css</a></p>
   </footer>
 
   <script>
@@ -293,14 +225,14 @@
       document.getElementById('navLinks').classList.toggle('open');
     });
 
-    // Close nav on link click (mobile)
+    // Close nav on link click
     document.querySelectorAll('.nav-links a').forEach(function (link) {
       link.addEventListener('click', function () {
         document.getElementById('navLinks').classList.remove('open');
       });
     });
 
-    // Active nav link on scroll
+    // Active nav on scroll
     var sections = document.querySelectorAll('section[id]');
     var navLinks = document.querySelectorAll('.nav-links a');
     window.addEventListener('scroll', function () {
